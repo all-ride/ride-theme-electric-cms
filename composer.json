@@ -1,0 +1,28 @@
+{
+    "name": "ride/theme-electric-cms",
+    "description": "Electric theme for the CMS application of the Ride framework",
+    "license": "MIT",
+    "authors": [
+
+        {
+            "name": "Kristof Serré",
+            "email": "kristof@statik.be"
+        }
+    ],
+    "require": {
+        "ride/app": "^1.0.0",
+        "ride/app-template-smarty": "^1.0.0",
+        "ride/lib-cms": "^1.0.0",
+        "ride/lib-common": "^1.0.0",
+        "ride/lib-i18n": "^1.0.0",
+        "ride/lib-template": "^1.0.0",
+        "ride/theme-electric": "^1.0.0",
+        "ride/web-template-smarty": "^1.0.0",
+        "ride/web-template-smarty-cms": "^1.0.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "ride\\web\\cms\\": ["src/"]
+        }
+    }
+}

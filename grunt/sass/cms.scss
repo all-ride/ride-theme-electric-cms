@@ -1,0 +1,62 @@
+@import 'components/tree';
+@import 'components/layout';
+
+form .row-layout .radio {
+  float: left;
+  width: 100px;
+  height: 90px;
+}
+
+form .row-layout .radio input {
+    position: relative;
+  top: 55px;
+  left: 43px;
+}
+
+form .row-layout .radio img {
+  float: left;
+}
+
+form .row-layout ul,
+form .row-layout .help-block {
+  clear: both;
+}
+
+#form-content-properties-order-field,
+#form-content-properties-order-direction,
+#form-region-select-region {
+  display: inline;
+  width: auto;
+}
+
+#form-text .row-existing,
+#form-text .row-text {
+  margin-bottom: 12px;
+}
+
+.breadcrumb {
+  /*margin: 0;*/
+  padding: 0 0 5px;
+  border-bottom: 1px solid  #ccc;
+}
+.breadcrumb__item a:hover {
+  text-decoration: none;
+}
+.breadcrumb__item--active a {
+  color: #535455;
+  text-decoration: none;
+}
+
+.widget-row + .widget-row {
+  margin-top: 10px;
+}
+
+.locale {
+    &__label {
+        display: inline-block;
+        margin-left: 25px;
+    }
+    &__url {
+        display: inline-block;
+    }
+}

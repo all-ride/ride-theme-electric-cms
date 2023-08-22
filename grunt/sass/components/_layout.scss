@@ -1,0 +1,280 @@
+.section {
+  // position: relative;
+  // padding-left: 35px;
+  margin-bottom: 20px;
+}
+
+.section__content {
+  padding: 0 12px;
+}
+.section__content .grid {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.section__content [data-block] {
+  padding: 10px;
+  // border: 1px solid #e3e3e3;
+  & + [data-block] {
+    border-left: 1px solid #e3e3e3;
+  }
+}
+
+.panel-heading {
+  padding: 6px;
+  background: #d7d7d7;
+}
+.panel-heading {
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: center;
+}
+.section__handle,
+.section__layouts {
+  float: left;
+  margin-right: 6px;
+}
+.section__layouts {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  .layout {
+    display: block;
+    padding: 2px;
+    float: left;
+    color: #fff;
+    text-decoration: none;
+    img {
+      display: block;
+      width: 34px;
+      height: 24px;
+    }
+    + .layout {
+      margin-left: 6px;
+    }
+    &.layout-active {
+      background: #3498db;
+    }
+  }
+}
+.section__handle {
+  line-height: 24px;
+  width: 24px;
+  text-align: center;
+  cursor: move;
+}
+.section__actions {
+  display: flex;
+  flex-flow: row nowrap;
+  float: right;
+  margin-left: auto;
+  padding-top: 2px;
+  .action {
+    line-height: 24px;
+    width: 24px;
+    text-align: center;
+    display: inline-block;
+    &, &:active {
+      color: #888;
+    }
+    &:hover,
+    &:focus {
+      color: #555;
+    }
+    + .action {
+      margin-left: 6px;
+    }
+  }
+}
+
+#region .droppable {
+    border: 1px solid #CCC;
+    min-height: 200px;
+    width: 90%;
+    padding: 5px 4px 1px 5px;
+}
+
+#region .inherited {
+    background-color: #ffffee;
+}
+
+#region .droppable .widget {
+	padding: 0;
+    margin: 0 0 4px 0;
+}
+
+.widget {
+  background: white;
+  list-style: none;
+  border: 1px solid #CCC;
+  padding: 6px;
+  label {
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+  }
+  img {
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  &.is-inherited {
+    background-color: rgba(255, 215, 0, 0.125);
+    .icon--exclamation-circle {
+      margin-right: 5px;
+      color: #6D5F14;
+    }
+  }
+  .is-unavailable {
+    opacity: .45;
+    background: none;
+  }
+  &.ui-sortable-helper:first-child + .widget {
+    margin-top: 0 !important;
+  }
+}
+.widget--button {
+  order: 2;
+  background: transparent;
+  border-style: dashed;
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  .icon {
+    margin-right: 6px;
+  }
+  &:hover,
+  &:focus {
+    border-style: solid;
+    background: #fff;
+  }
+}
+
+.widgets .widget ~ .widget {
+  margin-top: 12px;
+}
+
+.widget .radio {
+  position: relative;
+  padding-left: 24px;
+}
+.widget .radio input {
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+
+.widget__header {
+  margin-bottom: 5px;
+}
+.widget__handle {
+  float: left;
+  cursor: move;
+}
+.widget__actions {
+  float: right;
+}
+.widget__actions a {
+  color: #999;
+}
+.widget__actions a:hover {
+  color: #666;
+}
+.widget__title {
+  margin: 0 30px;
+  font-weight: bold;
+}
+
+.widget__content {
+  margin-left: 30px;
+  overflow: hidden;
+}
+
+#region .droppable .widget-actions {
+	width: 25px;
+	float: left;
+}
+
+#region .droppable .widget-actions .icon,
+#region .droppable .widget-actions .handle {
+	text-align: center;
+	padding: 3px 0 3px 0;
+  display: block;
+}
+
+#region .droppable .widget-actions .icon li {
+	text-align: left;
+}
+
+#region .droppable .widget-actions .icon {
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 5px;
+	background: #E1E1E1 url(../img/cms/arrow.down.grey.png) no-repeat scroll center bottom;
+}
+
+#region .droppable .widget-info {
+	padding: 5px 0 5px 9px;
+	width: 85%;
+	float: left;
+}
+
+#region .inherited .widget-info {
+	background: transparent url(../img/cms/widget.inherited.png) no-repeat scroll right 7px;
+}
+
+#region .widget-info ul {
+	padding: 0 0 0 15px;
+}
+
+#region .widget-info ul {
+	overflow: hidden;
+}
+
+#region .droppable .widget-info .name {
+	display: block;
+	margin-bottom: 7px;
+}
+
+#region .droppable .handle img {
+  padding-top: 4px;
+	cursor: move;
+}
+
+#region .droppable .preview {
+	display: inline;
+	margin-top: 5px;
+	color: #666;
+	line-height: 120%;
+}
+
+#widgets .widget {
+    width: 175px;
+    margin-left: 0;
+    cursor: move;
+    padding: 7px 7px 7px 30px;
+    margin: 0 4px 4px 0;
+    float: left;
+    position: relative;
+}
+
+#widgets .widget img {
+	position: absolute;
+  left: 4px;
+}
+
+.panel {
+  background: #fafafa;
+  border: 1px solid #d7d7d7;
+}
+
+//  Drop target
+.ui-sortable-placeholder {
+  background: none;
+  border-style: dashed;
+}
+
+//  Show a shadow when dragging
+.ui-sortable-helper {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .25);
+}
