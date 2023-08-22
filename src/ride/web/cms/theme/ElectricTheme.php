@@ -3,12 +3,12 @@
 namespace ride\web\cms\theme;
 
 use ride\library\cms\theme\Theme;
-use ride\library\template\theme\AsphaltTheme as AsphaltTemplateTheme;
+use ride\library\template\theme\ElectricTheme as ElectricTemplateTheme;
 
 /**
  * Interface for a template theme
  */
-class ElectricTheme extends AsphaltTemplateTheme implements Theme {
+class ElectricTheme extends ElectricTemplateTheme implements Theme {
 
     /**
      * Regions of this theme
