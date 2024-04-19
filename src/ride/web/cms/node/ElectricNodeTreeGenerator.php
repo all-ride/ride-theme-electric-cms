@@ -14,6 +14,22 @@ use ride\web\WebApplication;
 
 class ElectricNodeTreeGenerator implements NodeTreeGenerator {
 
+    protected $web;
+    protected $nodeModel;
+    protected $nodeTypeManager;
+    protected $securityManager;
+    protected $translator;
+    protected $actions;
+    protected $rootNodeId;
+    protected $node;
+    protected $locale;
+    protected $referer;
+    protected $toggledNodes;
+    /**
+     * @var array|mixed
+     */
+    protected $toggleNodes;
+
     public function __construct(WebApplication $web, NodeModel $nodeModel, SecurityManager $securityManager, Translator $translator, array $actions) {
         $this->web = $web;
         $this->nodeModel = $nodeModel;
