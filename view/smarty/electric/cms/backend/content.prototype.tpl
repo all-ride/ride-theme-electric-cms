@@ -105,10 +105,10 @@
     {$widgetUnavailable = ""}
     {$isPublished = $widget->getProperties()->isPublished()}
     {$availableLocales = $widget->getProperties()->getAvailableLocales()}
-    {$hasAvailableLocales = $availableLocales|is_array}
+    {$hasAvailableLocales = is_array($availableLocales)}
 
     {if $isPublished && $hasAvailableLocales}
-        {if !$locale|in_array:$availableLocales}
+        {if !in_array($locale, $availableLocales)}
             {$isPublished = false}
         {/if}
     {/if}
@@ -187,9 +187,9 @@
      *}
     {if !$isPublished}
         <span class="label label--danger"><span class="icon icon--eye-slash"></span> {translate key="widget.published.not"}</span>
-    {else if $locales|is_array && $locales|count > 1}
+    {elseif is_array($locales) && $locales|count > 1}
         {foreach $locales as $locale}
-            {if $availableLocales == 'all' || $locale|in_array:$availableLocales}
+            {if $availableLocales == 'all' || in_array($locale, $availableLocales)}
                 <span class="label label--success">{$locale}</span>
             {else}
                 <span class="label label--warning">

@@ -11,14 +11,14 @@
     ],
     "require": {
         "ride/app": "^1.0.0",
-        "ride/app-template-smarty": "^1.0.0",
+        "ride/app-template-smarty": "^2.0.0",
         "ride/lib-cms": "^1.0.0",
         "ride/lib-common": "^1.0.0",
         "ride/lib-i18n": "^1.0.0",
         "ride/lib-template": "^1.0.0",
-        "ride/theme-electric": "^1.0.0",
-        "ride/web-template-smarty": "^1.0.0",
-        "ride/web-template-smarty-cms": "^1.0.0"
+        "ride/theme-electric": "^2.0.0",
+        "ride/web-template-smarty": "^2.0.0",
+        "ride/web-template-smarty-cms": "^2.0.0"
     },
     "autoload": {
         "psr-0": {

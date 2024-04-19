@@ -2,7 +2,7 @@
 {function renderNodeActions actions=null current=null}
     {include file="cms/backend/content.prototype"}
     {$availableLocales = $node->getAvailableLocales()}
-    {$hasAvailableLocales = $availableLocales|is_array || $availableLocales == "all"}
+    {$hasAvailableLocales = is_array($availableLocales) || $availableLocales == "all"}
     {if $actions}
         {if isset($actions['go'])}
             {$baseUrl = $app.system->getConfig()->get("cms.url.`$site->getId()`.`$locale`", $app.url.script)}
